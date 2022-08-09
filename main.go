@@ -21,6 +21,7 @@ func main() {
 
 	fmt.Printf("Created Producer %v\n", p)
 
+	fmt.Println(p.Events())
 	// Listen to all the events on the default events channel
 	go func() {
 		for e := range p.Events() {
